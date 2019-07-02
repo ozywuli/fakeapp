@@ -1,0 +1,6 @@
+$black: red;
+
+body {
+  @apply bg-black;
+  color: $black;
+}

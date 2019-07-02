@@ -1,0 +1,15 @@
+{{outlet}}
+
+{{model.title}}
+{{log model.actors.length}}
+{{#each model.actors as |actor|}}
+  {{actor.name}}
+{{/each}}
+
+<form {{action "saveFakeModel" on="submit"}}>
+  {{input id="title" type="text" value=model.title}}
+  {{#each model.errors as |error|}}
+    {{log error}}
+  {{/each}}
+  <button type="submit">Submit</button>
+</form>
